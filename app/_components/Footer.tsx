@@ -15,7 +15,7 @@ const Footer = () => {
   return (
     <div className=" text-white  py-6 px-8 md:px-20">
       <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
-        <motion.p
+        <motion.div
           className="text-[12px] font-bold sm:max-w-[24%] max-w-[98%] sm:mb-0 mb-4"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -25,7 +25,7 @@ const Footer = () => {
           <p>
           "If you believe in yourself as much as we believe in you, nothing can ever stop you from achieving what you want in life."
           </p>
-        </motion.p>
+        </motion.div>
 
         {/* Social Links */}
         <motion.div
