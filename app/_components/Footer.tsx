@@ -23,7 +23,9 @@ const Footer = () => {
           transition={{ delay: 0.2 }}
         >
             <Quote className="my-2"/>
+          <p>
           "If you believe in yourself as much as we believe in you, nothing can ever stop you from achieving what you want in life."
+          </p>
         </motion.div>
 
         {/* Social Links */}
