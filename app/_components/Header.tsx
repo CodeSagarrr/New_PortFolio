@@ -46,7 +46,7 @@ const Header = () => {
 
                 {
                     menu ? (
-                        <div className='absolute sm:hidden block top-20 rounded-sm bg-black w-full py-6'>
+                        <div className='absolute z-10 sm:hidden block top-20 rounded-sm bg-black w-full py-6'>
                             <ul className='flex flex-col items-center gap-8 text-[16px] font-extrabold font-["Heebo"]'>
                                 <li className='cursor-pointer'
                                 onClick={() => handleRoute("/")}
