@@ -6,7 +6,7 @@ import { motion } from 'framer-motion'
 
 const Home = () => {
   return (
-    <div className='sm:w-full w-[97%] h-[84vh] sm:pt-12 pt-24'>
+    <div className='sm:w-full w-[97%] h-[74vh] sm:pt-20 pt-24'>
       <motion.div
         initial={{ opacity: 0, x: -50 }}
         animate={{ opacity: 1, x: 0 }}

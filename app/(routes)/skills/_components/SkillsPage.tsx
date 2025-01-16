@@ -27,7 +27,7 @@ const SkillsPage = () => {
         <>
             <div className='flex  sm:flex-row flex-col'>
 
-                <div className="sm:py-16 md:py-4 py-4 text-white flex flex-col w-full items-center">
+                <div className="sm:py-16 md:py-20 py-4 text-white flex flex-col w-full items-center">
                     <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
                         {skills.map((skill, index) => (
                             <motion.div
