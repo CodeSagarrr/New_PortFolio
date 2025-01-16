@@ -1,6 +1,7 @@
 "use client"
 import React from 'react'
 import { useForm, ValidationError } from '@formspree/react';
+import Link from 'next/link';
 const ContactPage = () => {
     const [state, handleSubmit] = useForm("myzzvalk");
     if (state.succeeded){
@@ -65,9 +66,9 @@ const ContactPage = () => {
                                 <div className="col-span-6">
                                     <p className="text-sm text-gray-300">
                                         By creating an account, you agree to our
-                                        <a href="/" className="text-gray-600 underline"> terms and conditions </a>
+                                        <Link href="/" className="text-gray-600 underline"> terms and conditions </Link>
                                         and
-                                        <a href="/" className="text-gray-600 underline">privacy policy</a>.
+                                        <Link href="/" className="text-gray-600 underline">privacy policy</Link>.
                                     </p>
                                 </div>
 
