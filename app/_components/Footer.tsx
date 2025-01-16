@@ -15,7 +15,6 @@ const Footer = () => {
   return (
     <div className=" text-white  py-6 px-8 md:px-20">
       <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
-        {/* Logo/Brand */}
         <motion.div
           className="text-[12px] font-bold sm:max-w-[24%] max-w-[98%] sm:mb-0 mb-4"
           initial={{ opacity: 0, y: 20 }}
