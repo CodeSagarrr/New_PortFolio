@@ -1,16 +1,19 @@
 "use client"
+import { cn } from '@/lib/utils';
 import { Contact, Menu, X } from 'lucide-react'
 import Image from 'next/image';
 import Link from 'next/link';
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
+import { usePathname } from "next/navigation"
 
 
 const Header = () => {
+    const href = usePathname();
     const nav = [
-        { id: 1, title: 'Home', path: '/' },
-        { id: 2, title: 'About', path: '/about' },
-        { id: 3, title: 'Skills', path: '/skills' },
-        { id: 4, title: 'Projects', path: '/projects' },
+        { id: 1, title: 'Home', path: '/' , active: href === '/'},
+        { id: 2, title: 'About', path: '/about' ,active: href === '/about'},
+        { id: 3, title: 'Skills', path: '/skills' , active: href === '/skills' },
+        { id: 4, title: 'Projects', path: '/projects' , active: href === '/projects'},
     ]
     const [menu, setMenu] = useState<boolean>(false);
 
@@ -31,8 +34,11 @@ const Header = () => {
                 <div className='sm:block hidden'>
                     <ul className='flex items-center gap-10 text-[16px] font-extrabold font-["Heebo"]'>
                         {
-                            nav.map((nav, i) => (
-                                <Link href={nav.path} key={i}><li className="cursor-pointer active:text-gray-500 transition-all  "
+                            nav.map((nav:any, i:number) => (
+                                <Link href={nav.path} key={i}><li className={cn(
+                                    `cursor-pointer transition-colors `,
+                                    nav.active ? "bg-white px-5 py-1 text-black rounded-sm transition-all" : "text-white"
+                                )}
                                 >{nav.title}</li></Link>
                             ))
                         }
@@ -46,7 +52,10 @@ const Header = () => {
                             <ul className='flex flex-col items-center gap-8 text-[16px] font-extrabold font-["Heebo"]'>
                                 {
                                     nav.map((nav, i) => (
-                                        <Link href={nav.path} key={i}><li className='cursor-pointer'
+                                        <Link href={nav.path} key={i}><li className={cn(
+                                            `cursor-pointer transition-colors `,
+                                            nav.active ? "bg-white px-5 py-1 text-black rounded-sm transition-all" : "text-white"
+                                        )}
                                         >{nav.title}</li></Link>
                                     ))
                                 }
