@@ -25,6 +25,12 @@ const ProjectsPage = () => {
           link: "https://smarttalk-chatbot-ai.netlify.app/",
         },
         {
+          title: "TwitterBioGenerator",
+          description: "A smart and user-friendly tool built with Next.js Tailwind and Together ai that crafts creative, professional, and engaging Twitter bios in seconds. This generator offers personalized bio suggestions tailored to your selected vibe, such as professional, casual, or funny.",
+          image: '/twitter.png',
+          link: "https://twitter-bio-generator--sooty.vercel.app/",
+        },
+        {
           title: "Real-Time-Chat-App",
           description: "A chat application built with MERN stack and WebSocket for real-time communication.",
           image: '/chatapp.jpg',
@@ -56,8 +62,8 @@ const ProjectsPage = () => {
                    <Image src={project.image} alt={project.title} width={600} height={600} className="w-full h-48 object-cover" />
                 <div className="absolute inset-0 bg-black bg-opacity-75 opacity-0 hover:opacity-100 transition duration-300 flex flex-col justify-center items-center text-center p-4">
                   <h3 className="text-2xl font-bold text-yellow-500 font-['Signika'] mb-2">{project.title}</h3>
-                  <p className="text-sm font-['Signika']">{project.description}</p>
-                  <a href={project.link} rel="noopener noreferrer" className="mt-4 inline-block bg-white font-['Signika'] hover:bg-gray-400 transition-all text-black font-semibold py-2 px-4 rounded">
+                  <p className="text-[13px] font-['Signika']">{project.description}</p>
+                  <a href={project.link} rel="noopener noreferrer" className="mt-2 inline-block bg-white font-['Signika'] hover:bg-gray-400 transition-all text-black font-semibold py-1 px-3 rounded">
                     View Project
                   </a>
                 </div>

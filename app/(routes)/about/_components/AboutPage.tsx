@@ -2,6 +2,7 @@
 import Image from 'next/image'
 import React from 'react'
 import { motion } from 'framer-motion'
+import Link from 'next/link'
 
 const About = () => {
   return (
@@ -30,18 +31,20 @@ const About = () => {
               <h2 className='sm:text-[3rem] text-[2rem] text-center font-bold font-["Signika"]'>I'm Sagar Vishwakarma</h2>
               <h2 className='text-center sm:text-[1.6rem] text-[1.2rem] font-bold font-["Signika","sans-serif"]'>and i'm a Full Stack Developer.</h2>
             </div>
-            <p className='max-w-[60%] sm:text-[14px] text-[12px] text-gray-400 p-1 mx-auto font-["Heebo"]'>Full-stack developers passionate about transforming ideas into scalable, high-performance digital solutions. With expertise in both frontend and backend development, we bring a holistic approach to web and mobile applications, ensuring seamless functionality and user experiences across all platforms.
+            <p className='sm:max-w-[60%] max-w-[100%] sm:text-[15px] text-[13px] text-gray-400 px-6 sm:p-1 mx-auto font-["Heebo"]'>Full-stack developers passionate about transforming ideas into scalable, high-performance digital solutions. With expertise in both frontend and backend development, we bring a holistic approach to web and mobile applications, ensuring seamless functionality and user experiences across all platforms.
             </p>
-            <p className='max-w-[60%] p-1 sm:text-[14px] text-[12px] text-gray-400 mx-auto font-["Heebo"]'>Our skill set covers a wide range of modern technologies, from responsive frontend frameworks like React, and Tailwind and Next.js to robust backend environments such as Node.js with Express.js. We specialize in building secure, efficient, and optimized systems, handling everything from MongoDB database architecture and API integration to interactive UI/UX design. Our goal is to deliver solutions that are not only technically sound but also aligned with your business objectives.</p>
+            <p className='sm:max-w-[60%] max-w-[100%] px-6 sm:p-1  sm:text-[15px] text-[13px] text-gray-400 mx-auto font-["Heebo"]'>Our skill set covers a wide range of modern technologies, from responsive frontend frameworks like React, and Tailwind and Next.js to robust backend environments such as Node.js with Express.js. We specialize in building secure, efficient, and optimized systems, handling everything from MongoDB database architecture and API integration to interactive UI/UX design. Our goal is to deliver solutions that are not only technically sound but also aligned with your business objectives.</p>
 
           </motion.div>
 
+          <Link href="/contact">
           <motion.button
             whileHover={{ scale: 1.05 }}
             className="sm:mt-4 mt-6 mb-6 bg-white text-black font-semibold py-2 px-6 rounded-lg"
           >
             <span> Contact </span>
           </motion.button>
+          </Link>
       </div>
     </div >
     </>
