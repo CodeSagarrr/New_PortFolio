@@ -1,10 +1,12 @@
 "use client"
 import React from 'react'
 import { useForm, ValidationError } from '@formspree/react';
+import { motion } from "framer-motion";
 import Link from 'next/link';
+import Image from 'next/image';
 const ContactPage = () => {
     const [state, handleSubmit] = useForm("myzzvalk");
-    if (state.succeeded){
+    if (state.succeeded) {
         return <p className='text-4xl font-["Signika"] font-extrabold w-full h-[68vh] flex justify-center items-center'>Thank You For Joining !</p>;
     }
 
@@ -13,23 +15,23 @@ const ContactPage = () => {
 
             <section className="bg-transperent">
                 <div className="lg:grid lg:min-h-screen lg:grid-cols-12">
-                    
+
                     <section className="relative flex h-[26rem] items-end bg-gray-900 lg:col-span-5 lg:h-[100vh] xl:col-span-6">
                         <img
                             alt="Image"
-                            src="https://img.freepik.com/free-vector/customer-support-illustration_23-2148885964.jpg?t=st=1737025258~exp=1737028858~hmac=576fe3e6f68d4beb59c6d3eab676c6e273624cdf5a378d736815f3ce5daf60ed&w=740"
+                            src={"https://img.freepik.com/free-vector/customer-support-illustration_23-2148885964.jpg?t=st=1737025258~exp=1737028858~hmac=576fe3e6f68d4beb59c6d3eab676c6e273624cdf5a378d736815f3ce5daf60ed&w=740"}
                             className="absolute inset-0 h-full w-full object-cover opacity-80"
                         />
 
-                        
+
                     </section>
 
                     <main
                         className="flex items-center  justify-center px-8 py-8 sm:px-12 lg:col-span-7 lg:px-16 lg:py-6 xl:col-span-6"
                     >
-                        
+
                         <div className="max-w-xl lg:max-w-3xl">
-                        <h1 className='text-center text-4xl font-bold font-["Signika"]'>Contact</h1>
+                            <h1 className='text-center text-4xl font-bold font-["Signika"]'>Contact</h1>
 
                             <form onSubmit={handleSubmit} className="mt-8 grid grid-cols-6 gap-6">
 
@@ -82,7 +84,18 @@ const ContactPage = () => {
                                         Send
                                     </button>
 
-
+                                    <motion.button
+                                        whileHover={{ scale: 1.05 }}
+                                        className="inline-block sm:ml-0 ml-4 shrink-0 rounded-md bg-white px-12 py-3 text-md font-bold font-['Signika'] text-black transition-all hover:bg-gray-400"
+                                    >
+                                        <a href="https://github.com/CodeSagarrr"> Github</a>
+                                    </motion.button>
+                                      <motion.button
+                                        whileHover={{ scale: 1.05 }}
+                                        className="inline-block sm:mt-0 mt-4 shrink-0 rounded-md bg-white px-9 py-3 text-md font-bold font-['Signika'] text-black transition-all hover:bg-gray-400"
+                                    >
+                                        <a href="https://www.linkedin.com/in/codesagarrr/"> Linkedin</a>
+                                    </motion.button>
                                 </div>
                             </form>
                         </div>
